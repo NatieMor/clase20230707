@@ -1,0 +1,13 @@
+<h1> Bienvenido <%= current_user.nombre %> </h1>
+<p>
+<% if current_user.telefono%>
+tu telefono es <%= current_user.telefono %>
+<% end %>
+<% if current_user.edad%>
+tu edad es <%= current_user.edad %>
+<% end %>
+<% if current_user.direccion %>
+tu direcciones <%= current_user.direccion %>
+<% end %>
+
+</p>

@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+<br>
+<br>
+<h1 class="text-center display-1"> <b> Tweets  </b></h1>
+<br>
+<%= form_with url: tweets_path, method: :get do |form|%>
+  <%= form.text_field :tweets, placeholder: ('buscar Usuario'), value: params[:tweets]%>
+  <button class="btn btn-outline-primary rounded border-dark" type="submit">Buscar</button>
+ <%end%>
+ <br>
+ <%= form_with url: tweets_path, method: :get do |form|%>
+  <%= form.text_field :tweets, placeholder: ('buscar tweet'), value: params[:tweets]%>
+  <button class="btn btn-outline-primary rounded border-dark" type="submit">Buscar</button>
+ <%end%>
+<br>
+<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+<div id="tweets">
+<figure class="text-center ">
+    <% @tweets.each do |tweet| %>
+      <br>
+    <%= render tweet %>
+    <% end %>
+</figure>
+
+</div>
+<div class="d-grid col-6 mx-auto border-dark">
+<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>
+<button class=" btn btn-lg btn-info float-end border-dark"><%= link_to "Nuevo tweet", new_tweet_path %></button>

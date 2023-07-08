@@ -1,0 +1,10 @@
+<div class="card my-2 d-inline-block" style="width: 20rem;" id="<%= dom_id tweet %>">
+<div class="card">
+<%= image_tag("foto1.jpg", width: 60, class: "card-img-top" , alt: "Foto de Perfil" )%>
+  <div class="card-body">
+    <h5 class="card-title blockquote"> Usuario: <%= tweet.UserName %></h5>
+    <p class="card-text"><%= tweet.descripcion %> </p>
+    <button class="d-center btn btn-sm text-info bg-light rounded border-dark"><%= link_to "Mostrar Tweet", tweet %></button>
+  </div>
+</div>       
+</div>

@@ -1,0 +1,13 @@
+<br>
+<h1 class="text-center display-3"> Editar Tweet </h1>
+<br>
+<div class="position-absolute top-30 start-50 translate-middle-x" >
+<%= render "form", tweet: @tweet %>
+</div>
+<br>
+<div class="position-absolute top-50 start-50 translate-middle-x" >
+<button class="btn btn-lg btn-light rounded border-dark " type="submit"><%= link_to "Mostrar tweet", @tweet %></button> |
+<button class="btn btn-lg btn-light rounded border-dark" type="submit"><%= link_to "regresar a los tweets", tweets_path %></button> 
+</div>
+  
+</div>
